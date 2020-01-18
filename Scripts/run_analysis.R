@@ -38,6 +38,5 @@ data.reduced <- data.all[,c(1, 2, features.subset)]
 data.tidy.summary <- aggregate( . ~ subject + activities, data=data.reduced, FUN=mean)
 
 # Output Tidy Summary to file
-write.csv(data.tidy.summary, "./Output/SubjectActivities.csv")
-
+write.table(data.tidy.summary, "./Output/SubjectActivities.txt", row.name = FALSE)
 
